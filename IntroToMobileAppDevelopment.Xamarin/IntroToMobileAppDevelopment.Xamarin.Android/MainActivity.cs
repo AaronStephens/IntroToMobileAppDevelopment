@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using IntroToMobileAppDevelopment.Xamarin.Presenters;
 using TinyIoC;
+using Xamarin;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Android
 {
@@ -23,6 +24,12 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
+			Insights.Initialize("3323c8f77ac284ecb3e7a708f387c2c2344875f0", ApplicationContext);
+			/*
+			 * Insights.Track("QuestCompleted", new Dictionary<string, string> { { "Quest", CurrentQuest.ToString() } });
+			 * Insights.Report(exception, new Dictionary <string, string> { {"Event Id", "00113"}, {"Other Data", "Goes Here"} });
+			 */
 
 			Bootstrap.Instance.Register ();
 			_dbProvider = TinyIoCContainer.Current.Resolve<IDatabaseProvider> ();
