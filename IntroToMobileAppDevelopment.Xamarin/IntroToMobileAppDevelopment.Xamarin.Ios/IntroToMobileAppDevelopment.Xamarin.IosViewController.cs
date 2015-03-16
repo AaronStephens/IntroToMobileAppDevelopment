@@ -19,7 +19,7 @@ namespace IntroToMobileAppDevelopment.Xamarin.Ios
 		{
 			base.ViewDidLoad ();
 			
-			_presenter = new MainPagePresenter ();
+			//_presenter = 
 			_presenter.SetView (this);
 		}
 
@@ -36,6 +36,11 @@ namespace IntroToMobileAppDevelopment.Xamarin.Ios
 		public void DisplayNumberMessage (MainPageModel model)
 		{
 			lblNumberMessage.Text = model.NumberMessage;
+		}
+
+		public void DisplayNumberList()
+		{
+
 		}
 
 		#endregion
