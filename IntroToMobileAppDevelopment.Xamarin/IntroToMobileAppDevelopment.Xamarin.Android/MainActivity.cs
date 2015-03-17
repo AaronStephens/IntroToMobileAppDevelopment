@@ -9,17 +9,21 @@ using Android.OS;
 using IntroToMobileAppDevelopment.Xamarin.Presenters;
 using TinyIoC;
 using Xamarin;
+using System.Linq;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Android
 {
-	[Activity (Label = "IntroToMobileAppDevelopment.Xamarin.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Random Numbers", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity, IMainPageView
 	{
 		private Button btnGetANumber;
+		private Button btnShowHistory;
 		private TextView tvNumberMessage;
 		private ListView lstPreviousNumbers;
 		private IMainPagePresenter _presenter;
 		private IDatabaseProvider _dbProvider;
+		private string[] items;
+		private ArrayAdapter ListAdapter;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -42,7 +46,11 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 
 			btnGetANumber = FindViewById<Button> (Resource.Id.btnGetANumber);
 			tvNumberMessage = FindViewById<TextView> (Resource.Id.tvNumberMessage);
-			lstPreviousNumbers = FindViewById<ListView> (Resource.Id.lstPreviousNumbers);
+			btnShowHistory = FindViewById<Button> (Resource.Id.btnShowHistory);
+
+			btnShowHistory.Click += (object sender, EventArgs e) => {
+				ShowHistory();
+			};
 			btnGetANumber.Click += (object sender, EventArgs e) => {
 				if (OnGetANumberClicked != null)
 					OnGetANumberClicked(this, EventArgs.Empty);
@@ -58,13 +66,10 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 			tvNumberMessage.Text = model.NumberMessage;
 		}
 
-		public void DisplayNumberList()
+		public void ShowHistory()
 		{
-			//string[] items = _dbProvider.GetNumbers().Cast<RandomEntry> ().Select(t => t.RandomNumber).ToArray();
-			string[] items = null;
-			var ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.Main, items);
-			lstPreviousNumbers.Adapter = ListAdapter;
-			ListAdapter.NotifyDataSetChanged ();
+			var intent = new Intent (this,typeof(RandomListActivity));
+			StartActivity (intent);
 		}
 
 		#endregion

@@ -45,6 +45,7 @@
     <Reference Include="Xamarin.Insights">
       <HintPath>..\packages\Xamarin.Insights.1.9.1.107\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Models\RandomEntry.cs" />
     <Compile Include="TinyIoC.cs" />
     <Compile Include="Providers\Bootstrap.cs" />
+    <Compile Include="RandomListActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -66,7 +66,7 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 			public const int btnGetANumber = 2131034112;
 			
 			// aapt resource value: 0x7f050002
-			public const int lstPreviousNumbers = 2131034114;
+			public const int btnShowHistory = 2131034114;
 			
 			// aapt resource value: 0x7f050001
 			public const int tvNumberMessage = 2131034113;
