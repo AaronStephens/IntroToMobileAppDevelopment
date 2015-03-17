@@ -1623,6 +1623,9 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 			// aapt resource value: 0x7f0b0053
 			public const int btnGetANumber = 2131427411;
 			
+			// aapt resource value: 0x7f0b0055
+			public const int btnShowHistory = 2131427413;
+			
 			// aapt resource value: 0x7f0b0060
 			public const int buttons = 2131427424;
 			
@@ -1712,9 +1715,6 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 			
 			// aapt resource value: 0x7f0b0039
 			public const int list_item = 2131427385;
-			
-			// aapt resource value: 0x7f0b0055
-			public const int lstPreviousNumbers = 2131427413;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int match_parent = 2131427370;

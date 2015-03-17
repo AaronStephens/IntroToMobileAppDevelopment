@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 using Android.App;
 using Android.Content;
@@ -9,13 +9,21 @@ using Android.OS;
 using IntroToMobileAppDevelopment.Xamarin.Presenters;
 using TinyIoC;
 using Xamarin;
+<<<<<<< HEAD
 using Android.Support.V7.App;
+
+namespace IntroToMobileAppDevelopment.Xamarin.Android
+{
+	[Activity (Label = "IntroToMobileAppDevelopment.Xamarin.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	public class MainActivity : ActionBarActivity, IMainPageView
+=======
 using System.Linq;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Android
 {
 	[Activity (Label = "Random Numbers", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : ActionBarActivity, IMainPageView
+	public class MainActivity : Activity, IMainPageView
+>>>>>>> origin/master
 	{
 		private Button btnGetANumber;
 		private Button btnShowHistory;

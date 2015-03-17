@@ -23,14 +23,12 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
-		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhone
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhone
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Debug|Android.ActiveCfg = Debug|iPhoneSimulator
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Debug|iPhone.Build.0 = Debug|iPhone
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{0F20F83B-BDF4-483C-81D8-CC906FA8F299}.Release|iPhone.ActiveCfg = Release|iPhone

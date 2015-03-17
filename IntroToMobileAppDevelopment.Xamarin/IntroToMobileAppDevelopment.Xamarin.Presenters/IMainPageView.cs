@@ -6,7 +6,6 @@ namespace IntroToMobileAppDevelopment.Xamarin.Presenters
 	{
 		event EventHandler OnGetANumberClicked;
 		void DisplayNumberMessage (MainPageModel model);
-		void DisplayNumberList();
 	}
 }
 

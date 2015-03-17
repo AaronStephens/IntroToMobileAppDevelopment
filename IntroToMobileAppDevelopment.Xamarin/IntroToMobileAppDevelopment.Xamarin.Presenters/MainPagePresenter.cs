@@ -24,6 +24,7 @@ namespace IntroToMobileAppDevelopment.Xamarin.Presenters
 		{
 			_view = view;
 			_view.OnGetANumberClicked += HandleOnGetANumberClicked;
+
 		}
 
 		protected async void HandleOnGetANumberClicked (object sender, EventArgs e)
@@ -39,8 +40,6 @@ namespace IntroToMobileAppDevelopment.Xamarin.Presenters
 			_view.DisplayNumberMessage(new MainPageModel() { NumberMessage = "Your number is\n" + result.Result.ToString() });
 
 			_dbProvider.AddNumber (result.Result.ToString());
-
-			_view.DisplayNumberList ();
 		}
 	}
 }
