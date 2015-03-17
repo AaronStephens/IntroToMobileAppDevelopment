@@ -11,6 +11,7 @@ using TinyIoC;
 using Xamarin;
 using Android.Support.V7.App;
 using System.Linq;
+using Android.Gms.Ads;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Android
 {
@@ -20,11 +21,8 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 		private Button btnGetANumber;
 		private Button btnShowHistory;
 		private TextView tvNumberMessage;
-		private ListView lstPreviousNumbers;
 		private IMainPagePresenter _presenter;
 		private IDatabaseProvider _dbProvider;
-		private string[] items;
-		private ArrayAdapter ListAdapter;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -44,6 +42,8 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 
 			_presenter = TinyIoCContainer.Current.Resolve<IMainPagePresenter> ();
 			_presenter.SetView (this);
+
+			CreateAd ();
 
 			btnGetANumber = FindViewById<Button> (Resource.Id.btnGetANumber);
 			tvNumberMessage = FindViewById<TextView> (Resource.Id.tvNumberMessage);
@@ -74,6 +74,17 @@ namespace IntroToMobileAppDevelopment.Xamarin.Android
 		}
 
 		#endregion
+
+		private void CreateAd() 
+		{
+			var ad = new AdView(this);
+			ad.AdSize = AdSize.SmartBanner;
+			ad.AdUnitId = "ca-app-pub-3686460611032892/4720651064";
+			var requestbuilder = new AdRequest.Builder();
+			ad.LoadAd(requestbuilder.Build());
+			var layout = FindViewById<LinearLayout>(Resource.Id.llMainLayout);
+			layout.AddView(ad);
+		}
 	}
 }
 
