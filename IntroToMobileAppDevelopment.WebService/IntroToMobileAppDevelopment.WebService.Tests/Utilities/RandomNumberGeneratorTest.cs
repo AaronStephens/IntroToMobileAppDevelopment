@@ -21,7 +21,7 @@ namespace IntroToMobileAppDevelopment.WebService.Tests.Utilities
             for (int i = 0; i < 10; i++)
             {
                 var newThread =
-                    new Thread(() => _randomNumbers.Add(RandomNumberGenerator.Instance.GetRandomNumber()));
+                    new Thread(() => _randomNumbers.Add(RandomNumberGenerator.Instance.GetRandomNumber().Result));
                 newThread.Start();
                 _threads.Add(newThread);
             }

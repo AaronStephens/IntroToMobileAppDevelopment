@@ -1,4 +1,5 @@
 ﻿using System;
+using IntroToMobileAppDevelopment.WebService.Models;
 
 namespace IntroToMobileAppDevelopment.WebService.Utilities
 {
@@ -27,11 +28,14 @@ namespace IntroToMobileAppDevelopment.WebService.Utilities
             }
         }
 
-        public int GetRandomNumber()
+        public RandomNumberResult GetRandomNumber()
         {
             lock (_lock)
             {
-                return _random.Next(0,50);
+                return new RandomNumberResult()
+                {
+                    Result = _random.Next(0, 50)
+                };
             }
         }
     }
