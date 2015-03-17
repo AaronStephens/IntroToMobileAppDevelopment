@@ -9,11 +9,12 @@ using Android.OS;
 using IntroToMobileAppDevelopment.Xamarin.Presenters;
 using TinyIoC;
 using Xamarin;
+using Android.Support.V7.App;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Android
 {
 	[Activity (Label = "IntroToMobileAppDevelopment.Xamarin.Android", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity, IMainPageView
+	public class MainActivity : ActionBarActivity, IMainPageView
 	{
 		private Button btnGetANumber;
 		private TextView tvNumberMessage;
